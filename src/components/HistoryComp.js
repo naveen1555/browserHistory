@@ -9,13 +9,18 @@ const HistoryComp = props => {
   return (
     <li className="lists">
       <div className="itemcontainer">
-        <div className="timeAccessed">{timeAccessed}</div>
+        <p className="timeAccessed">{timeAccessed}</p>
         <div className="logoUrl">
-          <img src={logoUrl} alt="item" />
+          <img src={logoUrl} alt="domain logo" />
         </div>
-        <div className="title">{title}</div>
-        <div className="domainUrl">{domainUrl}</div>
-        <button type="button" className="delete-container" onClick={onDelete}>
+        <p className="title">{title}</p>
+        <p className="domainUrl">{domainUrl}</p>
+        <button
+          type="button"
+          className="delete-container"
+          onClick={onDelete}
+          testid="delete"
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png "
             alt="delete-icon"

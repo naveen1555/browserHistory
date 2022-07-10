@@ -103,6 +103,7 @@ class App extends Component {
 
   render() {
     const {searchInput, usersDetailsList} = this.state
+
     const searchResults = usersDetailsList.filter(eachUser =>
       eachUser.title.includes(searchInput),
     )
@@ -113,7 +114,7 @@ class App extends Component {
           <div className="logo">
             <img
               src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
-              alt="logo"
+              alt="app logo"
               className="logo"
             />
           </div>
@@ -126,7 +127,7 @@ class App extends Component {
               />
             </div>
             <input
-              type="text"
+              type="search"
               className="inputf"
               value={searchInput}
               onChange={this.onChangeSearchInput}
